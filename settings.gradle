@@ -1,0 +1,3 @@
+rootProject.name = 'workshop-generative-posters'
+
+include 'poster', 'typography-001'
