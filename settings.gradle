@@ -2,8 +2,10 @@ rootProject.name = 'workshop-generative-posters'
 
 include 'poster',
         'filters',
+        'rss',
         'typography-001',
         'typography-002',
         'textfile-001',
         'video-001',
-        'images-001'
+        'images-001',
+        'rss-001'
