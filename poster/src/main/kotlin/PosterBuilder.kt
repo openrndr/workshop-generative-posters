@@ -29,8 +29,8 @@ class PosterBuilder(val drawer: Drawer) {
         }
 
         if (blend == null) {
-            drawer.isolatedWithTarget(target) {
-                drawer.image(layerPost)
+            drawer.isolatedWithTarget(rt) {
+                drawer.image(layerPost, layerPost.bounds, drawer.bounds)
             }
         } else {
             blend.apply( arrayOf(layerPost, rt.colorBuffer(0)), rt.colorBuffer(0) )
@@ -42,6 +42,8 @@ class PosterBuilder(val drawer: Drawer) {
 
         layerTarget.colorBuffer(0).destroy()
         layerTarget.depthBuffer?.destroy()
+        layerTarget.detachColorBuffers()
+        layerTarget.detachDepthBuffer()
         layerTarget.destroy()
     }
 
@@ -52,7 +54,8 @@ fun poster(drawer:Drawer, builder: PosterBuilder.() -> Unit) {
 
     val pb = PosterBuilder(drawer)
     drawer.withTarget(pb.target) {
+        drawer.background(ColorRGBa.BLACK)
         pb.builder()
     }
-    drawer.image(pb.target.colorBuffer(0))
+    drawer.image(pb.target.colorBuffer(0),pb.target.colorBuffer(0).bounds, drawer.bounds)
 }
