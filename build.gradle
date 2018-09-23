@@ -49,6 +49,7 @@ allprojects {
         maven {
             url = "https://dl.bintray.com/openrndr/openrndr/"
         }
+        maven { url "https://jitpack.io" }
     }
     dependencies {
         compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
