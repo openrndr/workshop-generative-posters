@@ -24,12 +24,11 @@ class Textfile001 : Program() {
             text = it.files[0].readLines().toMutableList()
         }
 
-
         drawFunc = {
             val scale = (RenderTarget.active.width.toDouble() / width)
 
             verticalWaves.amplitude = 0.01
-            verticalWaves.period = Math.PI * 2.0 * 8.0
+            verticalWaves.period = Math.PI * 2.0 * mouse.position.y/height * 16.0
             verticalWaves.phase = seconds
             poster(drawer) {
 

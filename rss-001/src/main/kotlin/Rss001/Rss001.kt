@@ -4,11 +4,12 @@ import org.openrndr.color.ColorRGBa
 import org.openrndr.configuration
 import org.openrndr.draw.FontImageMap
 import org.openrndr.extensions.Screenshots
-import org.openrndr.filter.blend.add
+
 import org.openrndr.filter.blend.multiply
 import org.openrndr.math.Vector2
 import org.openrndr.rss.RSSParser
 import org.openrndr.shape.Rectangle
+
 import org.openrndr.text.Writer
 import java.net.URL
 
@@ -38,10 +39,10 @@ class Rss001: Program() {
                     drawer.fill = ColorRGBa.PINK
                     val w = Writer(drawer)
                     w.apply {
-                        style.leading = -10.0
                         box = Rectangle(20.0, 20.0, width-40.0, height-20.0)
                         text(article.content ?: "")
                     }
+
                 }
             }
         }

@@ -8,4 +8,5 @@ include 'poster',
         'textfile-001',
         'video-001',
         'images-001',
-        'rss-001'
+        'rss-001',
+        'website-001'
