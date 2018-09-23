@@ -9,4 +9,5 @@ include 'poster',
         'video-001',
         'images-001',
         'rss-001',
-        'website-001'
+        'website-001',
+        'shapes-001'
