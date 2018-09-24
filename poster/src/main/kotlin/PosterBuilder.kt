@@ -33,7 +33,7 @@ class PosterBuilder(val drawer: Drawer) {
                 drawer.image(layerPost, layerPost.bounds, drawer.bounds)
             }
         } else {
-            blend.apply( arrayOf(layerPost, rt.colorBuffer(0)), rt.colorBuffer(0) )
+            blend.apply( arrayOf(rt.colorBuffer(0), layerPost), rt.colorBuffer(0) )
         }
 
         if (post != null) {
