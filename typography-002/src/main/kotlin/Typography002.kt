@@ -41,8 +41,6 @@ class Typography002 : Program() {
                 verticalWaves.period = Math.PI * 2.0 * 2.0
                 verticalWaves.phase = seconds * 2.0
 
-
-
                 layer(post = verticalWaves, blend = add) {
                     layer(post = gaussianBlur.apply {
                         gain = 1.0
