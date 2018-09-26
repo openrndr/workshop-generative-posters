@@ -1,9 +1,22 @@
 package org.openrndr.workshop
 
+import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.Filter
 import org.openrndr.filter.filterShaderFromUrl
 import org.openrndr.math.Vector2
 import org.openrndr.resourceUrl
+
+
+class GradientMap : Filter(filterShaderFromUrl(resourceUrl("/shaders/gradient-map.frag"))) {
+
+    var dark: ColorRGBa by parameters
+    var light: ColorRGBa by parameters
+    init {
+        dark = ColorRGBa.BLACK
+        light = ColorRGBa.WHITE
+    }
+}
+
 
 class EdgeDetect : Filter(filterShaderFromUrl(resourceUrl("/shaders/edge-detect.frag"))) {
     var gain: Double by parameters
