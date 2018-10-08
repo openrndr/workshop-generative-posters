@@ -1,0 +1,4 @@
+dependencies {
+    compile project(":toolkit")
+    compile "com.github.chimbori:crux:2.0.0"
+}
