@@ -30,23 +30,4 @@ pluginManagement {
 rootProject.name = 'workshop-generative-posters'
 include 'examples'
 include 'toolkit'
-//
-//include 'poster',
-//        'filters',
-//        'rss',
-//        'folder-monitor-001',
-//        'typography-001',
-//        'typography-002',
-//        'textfile-001',
-//        'video-001',
-//        'images-001',
-//        'rss-001',
-//        'website-001',
-//        'effects-001',
-//        'effects-002',
-//        'effects-003',
-//        'shapes-001',
-//        'shapes-002',
-//        'shapes-003'
-//include 'stuff-i-made'
 
