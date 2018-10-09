@@ -23,17 +23,14 @@ class Effects002b : Program() {
             poster(drawer) {
                 drawer.background(ColorRGBa.BLACK)
 
-                zoomMosaic2.scale = Math.cos(seconds*2.1) + 2.0
+                zoomMosaic2.scale = Math.cos(seconds * 2.1) + 2.0
                 zoomMosaic2.ySteps = 4
                 zoomMosaic2.xSteps = 4
-                layer(post = zoomMosaic2) {
-
-                    zoomMosaic.scale = Math.cos(seconds) + 2.0
-                    layer(post = zoomMosaic) {
-                        drawer.fill = ColorRGBa.WHITE
-                        drawer.stroke = null
-                        drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
-                    }
+                zoomMosaic.scale = Math.cos(seconds) + 2.0
+                layer(post = listOf(zoomMosaic2, zoomMosaic)) {
+                    drawer.fill = ColorRGBa.WHITE
+                    drawer.stroke = null
+                    drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
                 }
             }
         }

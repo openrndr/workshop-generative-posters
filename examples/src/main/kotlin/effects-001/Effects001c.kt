@@ -26,12 +26,10 @@ class Effects001c : Program() {
                 stepWaves.phase = seconds
                 stepWaves2.phase = seconds
 
-                layer(post = stepWaves2) {
-                    layer(post = stepWaves) {
-                        drawer.fill = ColorRGBa.WHITE
-                        drawer.stroke = null
-                        drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
-                    }
+                layer(post = listOf(stepWaves2, stepWaves)) {
+                    drawer.fill = ColorRGBa.WHITE
+                    drawer.stroke = null
+                    drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
                 }
             }
         }

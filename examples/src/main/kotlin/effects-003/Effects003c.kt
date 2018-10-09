@@ -40,16 +40,11 @@ class Effects003c : Program() {
                 separate.greenShift = Vector2(Math.random() - 0.5, Math.random() - 0.5) * 0.1
                 separate.blueShift = Vector2(Math.random() - 0.5, Math.random() - 0.5) * 0.1
 
-                layer(post = separate) {
-                    layer(post = stepWaves) {
-                        layer(post = wave) {
-                            layer(post = separate) {
-                                drawer.fill = ColorRGBa.WHITE.opacify(Math.cos(seconds)*0.5+0.5)
-                                drawer.stroke = null
-                                drawer.circle(mouse.position, 200.0)
-                            }
-                        }
-                    }
+                val effects = listOf(separate, stepWaves, wave, separate)
+                layer(post = effects) {
+                    drawer.fill = ColorRGBa.WHITE.opacify(Math.cos(seconds) * 0.5 + 0.5)
+                    drawer.stroke = null
+                    drawer.circle(mouse.position, 200.0)
                 }
                 //Thread.sleep(100)
             }

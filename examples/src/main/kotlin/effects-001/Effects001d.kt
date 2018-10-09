@@ -32,12 +32,10 @@ class Effects001d : Program() {
 
                 stepWaves2.amplitude = 0.5
 
-                layer(post = stepWaves2) {
-                    layer(post = stepWaves) {
+                layer(post = listOf(stepWaves2, stepWaves)) {
                         drawer.fill = ColorRGBa.WHITE
                         drawer.stroke = null
                         drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
-                    }
                 }
             }
         }
