@@ -65,10 +65,23 @@ allprojects {
     }
 }
 
+project(":toolkit"){
+    apply plugin: 'maven-publish'
+    publishing {
+        publications {
+            maven(MavenPublication) {
+                groupId = 'org.openrndr.workshop'
+                artifactId = 'toolkit'
+                version = '0.0.1-SNAPSHOT'
+                from components.java
+            }
+        }
+    }
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
-
 }
 
 dependencies {
