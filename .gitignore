@@ -4,3 +4,5 @@ out/
 .idea/
 *.iml
 build/
+workshop/**/**
+!workshop/src/main/kotlin/.gitkeep
