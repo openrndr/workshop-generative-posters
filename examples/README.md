@@ -1,46 +1,40 @@
+## Screenshots
+
+#### effects-001
+![effects-001](./images/effects-001.png)
+
+#### effects-002
+![effects-002](./images/effects-002.png)
+
+#### effects-003
+![effects-003](./images/effects-003.png)
+
+#### images-001
+![images-001](./images/images-001.png)
+
 #### rss-001
-![images/rss-001.png](images/rss-001.png)<br>
-![images/separate.png](images/separate.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.24.png](images/shapes-001/Shapes001-2018-10-08-15.20.24.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.28.png](images/shapes-001/Shapes001-2018-10-08-15.20.28.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.38.png](images/shapes-001/Shapes001-2018-10-08-15.20.38.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.40.png](images/shapes-001/Shapes001-2018-10-08-15.20.40.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.47.png](images/shapes-001/Shapes001-2018-10-08-15.20.47.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.49.png](images/shapes-001/Shapes001-2018-10-08-15.20.49.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.50.png](images/shapes-001/Shapes001-2018-10-08-15.20.50.png)<br>
-![images/shapes-001/Shapes001-2018-10-08-15.20.52.png](images/shapes-001/Shapes001-2018-10-08-15.20.52.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.23.51.png](images/shapes-002/Shapes002-2018-10-08-15.23.51.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.23.55.png](images/shapes-002/Shapes002-2018-10-08-15.23.55.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.24.06.png](images/shapes-002/Shapes002-2018-10-08-15.24.06.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.42.12.png](images/shapes-002/Shapes002-2018-10-08-15.42.12.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.42.19.png](images/shapes-002/Shapes002-2018-10-08-15.42.19.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.42.21.png](images/shapes-002/Shapes002-2018-10-08-15.42.21.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.42.23.png](images/shapes-002/Shapes002-2018-10-08-15.42.23.png)<br>
-![images/shapes-002/Shapes002-2018-10-08-15.42.24.png](images/shapes-002/Shapes002-2018-10-08-15.42.24.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.28.png](images/shapes-003/Shapes003-2018-10-08-15.54.28.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.36.png](images/shapes-003/Shapes003-2018-10-08-15.54.36.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.38.png](images/shapes-003/Shapes003-2018-10-08-15.54.38.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.39.png](images/shapes-003/Shapes003-2018-10-08-15.54.39.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.43.png](images/shapes-003/Shapes003-2018-10-08-15.54.43.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.54.56.png](images/shapes-003/Shapes003-2018-10-08-15.54.56.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.55.09.png](images/shapes-003/Shapes003-2018-10-08-15.55.09.png)<br>
-![images/shapes-003/Shapes003-2018-10-08-15.55.15.png](images/shapes-003/Shapes003-2018-10-08-15.55.15.png)<br>
-![images/stepwaves+separate+waves.png](images/stepwaves+separate+waves.png)<br>
-![images/stepwaves.png](images/stepwaves.png)<br>
-![images/textfile-001/Textfile001-1.png](images/textfile-001/Textfile001-1.png)<br>
-![images/textfile-001/Textfile001-2.png](images/textfile-001/Textfile001-2.png)<br>
-![images/textfile-001/Textfile001-3.png](images/textfile-001/Textfile001-3.png)<br>
-![images/textfile-001/Textfile001-4.png](images/textfile-001/Textfile001-4.png)<br>
-![images/typography-001.png](images/typography-001.png)<br>
-![images/typography-002.png](images/typography-002.png)<br>
-![images/vertical-stepwaves.png](images/vertical-stepwaves.png)<br>
-![images/video-001.png](images/video-001.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.01.png](images/website-001/Website001-2018-10-08-16.05.01.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.06.png](images/website-001/Website001-2018-10-08-16.05.06.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.08.png](images/website-001/Website001-2018-10-08-16.05.08.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.11.png](images/website-001/Website001-2018-10-08-16.05.11.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.16.png](images/website-001/Website001-2018-10-08-16.05.16.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.17.png](images/website-001/Website001-2018-10-08-16.05.17.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.19.png](images/website-001/Website001-2018-10-08-16.05.19.png)<br>
-![images/website-001/Website001-2018-10-08-16.05.20.png](images/website-001/Website001-2018-10-08-16.05.20.png)<br>
-![images/zoom-mozaic.png](images/zoom-mozaic.png)<br>
+![rss-001](./images/rss-001.png)
+
+#### shapes-001
+![shapes-001](./images/shapes-001.png)
+
+#### shapes-002
+![shapes-002](./images/shapes-002.png)
+
+#### shapes-003
+![shapes-003](./images/shapes-003.png)
+
+#### textfile-001
+![textfile-001](./images/textfile-001.png)
+
+#### typography-001
+![typography-001](./images/typography-001.png)
+
+#### typography-002
+![typography-002](./images/typography-002.png)
+
+#### video-001
+![video-001](./images/video-001.png)
+
+#### website-001
+![website-001](./images/website-001.png)
