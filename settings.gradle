@@ -30,4 +30,5 @@ pluginManagement {
 rootProject.name = 'workshop-generative-posters'
 include 'examples'
 include 'toolkit'
+include 'workshop'
 
