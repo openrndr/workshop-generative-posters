@@ -1,10 +1,5 @@
 
-
-
-
-
-
-
+[find the examples here](https://github.com/openrndr/workshop-generative-posters/tree/master/examples/src/main/kotlin)
 
 ## Screenshots
 
