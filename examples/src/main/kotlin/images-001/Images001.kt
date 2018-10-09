@@ -36,6 +36,7 @@ class Images001 : Program() {
 
                 if (file.isFile) {
                     if (file.extension in supportedExtensions) {
+                        println(file.absolutePath)
                         images.add(ColorBuffer.fromFile(file.absolutePath))
                     }
                 }
