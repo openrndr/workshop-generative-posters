@@ -7,7 +7,7 @@ import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.math.Vector2
-import org.openrndr.workshop.StepWaves
+import org.openrndr.workshop.toolkit.filters.StepWaves
 
 class Effects001a : Program() {
 

@@ -56,7 +56,7 @@ class PosterBuilder(val drawer: Drawer) {
     }
 
     fun layer(blend: Filter? = null, post: Filter? = null, builder: PosterBuilder.() -> Unit) {
-        layer(blend, post?.let { listOf(it) } ?: listOf(), builder)
+        layer(blend, post?.let { listOf(it) }, builder)
     }
 
 }

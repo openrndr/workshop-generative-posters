@@ -7,9 +7,9 @@ import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.math.Vector2
-import org.openrndr.workshop.Separate
-import org.openrndr.workshop.VerticalStepWaves
-import org.openrndr.workshop.Waves
+import org.openrndr.workshop.toolkit.filters.Separate
+import org.openrndr.workshop.toolkit.filters.VerticalStepWaves
+import org.openrndr.workshop.toolkit.filters.Waves
 
 class Effects003c : Program() {
 

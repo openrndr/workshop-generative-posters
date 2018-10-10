@@ -4,12 +4,9 @@ import org.openrndr.configuration
 import org.openrndr.draw.FontImageMap
 import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
-import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
-import org.openrndr.workshop.VerticalWaves
-import org.openrndr.workshop.Waves
-import java.io.File
+import org.openrndr.workshop.toolkit.filters.VerticalWaves
 
 class Textfile001 : Program() {
 

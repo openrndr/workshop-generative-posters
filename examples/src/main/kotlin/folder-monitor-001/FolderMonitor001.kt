@@ -10,7 +10,6 @@ import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.shape.Rectangle
 import org.openrndr.text.Writer
-import org.openrndr.workshop.StepWaves
 import java.io.File
 
 class FolderMonitor001 : Program() {

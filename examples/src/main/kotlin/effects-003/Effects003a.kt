@@ -7,7 +7,7 @@ import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.math.Vector2
-import org.openrndr.workshop.Separate
+import org.openrndr.workshop.toolkit.filters.Separate
 
 class Effects003a : Program() {
 

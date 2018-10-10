@@ -7,8 +7,8 @@ import org.openrndr.extensions.Screenshots
 import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
-import org.openrndr.workshop.VerticalWaves
-import org.openrndr.workshop.Waves
+import org.openrndr.workshop.toolkit.filters.VerticalWaves
+import org.openrndr.workshop.toolkit.filters.Waves
 
 class Typography002 : Program() {
 

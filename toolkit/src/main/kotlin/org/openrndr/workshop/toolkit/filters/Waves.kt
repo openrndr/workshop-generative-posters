@@ -1,4 +1,4 @@
-package org.openrndr.workshop
+package org.openrndr.workshop.toolkit.filters
 
 import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.Filter
