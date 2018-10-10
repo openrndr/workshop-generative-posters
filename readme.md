@@ -39,3 +39,31 @@ If you'd like to use the toolkit in your own project, you can do the following:
 ```compile "com.github.openrndr.workshop-generative-posters:toolkit:-SNAPSHOT"```
 - Replace `TemplateProgram.kt` with something from the `examples` module in this repository and run it.
 
+
+## DOCS
+### Fonts
+TODO Document fonts
+<!-- - [0xA000](http://pippin.gimp.org/0xA000/) -->
+<!-- - DONE [3270font](https://github.com/rbanffy/3270font) -->
+<!-- - [Anonymous Pro](https://www.marksimonson.com/fonts/view/anonymous-pro) -->
+<!-- - DONE [Astloch](https://www.fontsc.com/font/astloch) -->
+<!-- - DONE [Autopia](http://velvetyne.fr/) -->
+<!-- - [Charis SIL](http://software.sil.org/charis/download/) -->
+<!-- - [Cormorant](https://github.com/CatharsisFonts/Cormorant) -->
+<!-- - DONE [Hanken](https://fontlibrary.org/en/font/hanken) -->
+<!-- - DONE [Iosevka](https://github.com/be5invis/Iosevka) -->
+<!-- - DONE [Inknut Antiqua](https://github.com/clauseggers/Inknut-Antiqua) -->
+<!-- - DONE [Jost](http://indestructibletype.com/Jost.html) -->
+<!-- - DONE [Meyrin](https://github.com/optional-is/Meyrin) -->
+<!-- - [Now Alt](https://fontlibrary.org/en/font/now-alt) -->
+<!-- - [NooAlf fonts](http://www.nooalf.com/index.html) -->
+<!-- - [Old Standard](https://www.fontsquirrel.com/fonts/Old-Standard-TT) -->
+<!-- - [Playfair Display](https://github.com/clauseggers/Playfair-Display) -->
+<!-- - [Pecita](http://pecita.eu/) -->
+<!-- - DONE [Rumeur](https://github.com/groupeccc/Rumeur) -->
+<!-- - DONE [Rubik](https://github.com/googlefonts/rubik) -->
+<!-- - DONE [Space Mono](https://fonts.google.com/specimen/Space+Mono?selection.family=Space+Mono) -->
+<!-- - DONE [Syne](https://gitlab.com/bonjour-monde/syne-typeface/tree/master) -->
+<!-- - [Savate](https://github.com/CollectifWech/Savate) -->
+<!-- - [TODO PICK SOME STUFF FROM HERE](http://velvetyne.fr/) -->
+<!-- - DONE [Unifraktur](http://unifraktur.sourceforge.net/) -->
