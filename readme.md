@@ -40,7 +40,65 @@ If you'd like to use the toolkit in your own project, you can do the following:
 - Replace `TemplateProgram.kt` with something from the `examples` module in this repository and run it.
 
 
-## DOCS
+# DOCS
+
+## OpenRNDR 101
+
+Here's how a very basic OpenRNDR program looks like:
+```
+import org.openrndr.*
+import org.openrndr.color.ColorRGBa
+
+class SimpleProgram: Program() {
+
+    override fun setup(){
+        println("Setup is called once at the start of the program.")
+    }
+
+    override fun draw() {
+        // draw is called as many times a second as possible
+        drawer.background(ColorRGBa.BLACK)
+        drawer.fill = ColorRGBa.WHITE
+        drawer.circle(width / 2.0, height / 2.0, Math.abs(Math.cos(seconds) * 300))
+    }
+}
+
+fun main(args: Array<String>) {
+    application(SimpleProgram(),
+            configuration {
+                width = 1280
+                height = 720
+            })
+}
+```
+
+Your create a class which inherits from `Program` and override its two most important methods: `setup` and `draw`.
+Setup is called once at the start of the program, then draw is called as many times a second as possible.
+`setup` is for initializing the state of your program, while `draw` is for updating that state: creating animations.
+
+
+#### Pro Tip ( ͡° ͜ʖ ͡°)
+User the `FunctionDrawer` extension to define the draw function directly inside `setup`.
+```
+class SimpleProgram: Program() {
+
+    override fun setup(){
+        println("Setup is called once at the start of the program.")
+        extend(FunctionDrawer{
+            // draw is called as many times a second as possible
+            drawer.background(ColorRGBa.BLACK)
+            drawer.fill = ColorRGBa.WHITE
+            drawer.circle(width / 2.0, height / 2.0, Math.abs(Math.cos(seconds) * 300))
+        })
+    }
+
+}
+```
+
+
+
+## Toolkit
+
 ### Fonts
 There are a number of hand picked fonts included in the toolkit.
 Urls for these fonts are accessible through `org.openrndr.workshop.toolkit.typography.Fonts`.
