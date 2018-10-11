@@ -23,7 +23,7 @@ class Shapes004 : Program() {
 
                 drawer.background(ColorRGBa.WHITE)
 
-                for(l in 0..10) {
+                for(l in 0..5) {
                     if(l%2 == 0) {
                         layer(blend = lighten) {
                             drawer.fill = null
@@ -55,8 +55,11 @@ class Shapes004 : Program() {
         }
         val xStep = (width  / count)
         val yStep = (height / count)
+
         drawer.translate(Vector2(width / 2.0, height / 2.0))
+
         val listOfVector2 = mutableListOf<Vector2>()
+
         for (x in 0 until count) {
             for (y in 0 until count) {
                 val xCorrect = (count * xStep) / 2.0
@@ -64,7 +67,7 @@ class Shapes004 : Program() {
                 listOfVector2.add(Vector2(x * xStep - xCorrect + xStep / 2, y * yStep - yCorrect + yStep / 2))
             }
         }
-        drawer.circles(listOfVector2, l*10.0)
+        drawer.circles(listOfVector2, Math.abs(Math.sin(seconds*0.1+l*0.1)*(25.0*l)) )
 
     }
 
