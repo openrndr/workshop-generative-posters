@@ -9,6 +9,7 @@ import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
 import org.openrndr.workshop.toolkit.filters.VerticalWaves
 import org.openrndr.workshop.toolkit.filters.Waves
+import org.openrndr.workshop.toolkit.typography.Fonts
 
 class Typography002 : Program() {
 
@@ -32,7 +33,7 @@ class Typography002 : Program() {
                     waves2.period = Math.PI * 2.0 * 8.432
                     waves2.phase = seconds
                     layer(post = waves2) {
-                        drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 32.0, scale)
+                        drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, scale)
                         drawer.texts((0..40).map { "My name is" }, (0..40).map { Vector2(20.0, it * 20.0) })
                     }
                 }
@@ -48,7 +49,7 @@ class Typography002 : Program() {
                         window = (25 * scale).toInt()
                         sigma = (Math.cos(seconds) * 5.0 + 5.0) * scale
                     }, blend = add) {
-                        drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 64.0, scale)
+                        drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, scale)
                         drawer.text("Tim Blurton", 20.0, 250.0)
                     }
                 }

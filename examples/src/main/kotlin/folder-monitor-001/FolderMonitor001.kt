@@ -10,6 +10,7 @@ import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.shape.Rectangle
 import org.openrndr.text.Writer
+import org.openrndr.workshop.toolkit.typography.Fonts
 import java.io.File
 
 class FolderMonitor001 : Program() {
@@ -47,7 +48,7 @@ class FolderMonitor001 : Program() {
                         drawer.background(ColorRGBa.BLACK)
                         layer {
                             drawer.fill = ColorRGBa.WHITE
-                            drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 32.0, scale)
+                            drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, scale)
                             val w = Writer(drawer)
                             w.box = Rectangle(0.0, 0.0, width * 1.0, height * 1.0)
                             w.newLine()

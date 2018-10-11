@@ -11,6 +11,7 @@ import org.openrndr.rss.RSSParser
 import org.openrndr.shape.Rectangle
 
 import org.openrndr.text.Writer
+import org.openrndr.workshop.toolkit.typography.Fonts
 import java.net.URL
 
 class Rss001: Program() {
@@ -35,7 +36,7 @@ class Rss001: Program() {
                 }
 
                 layer(blend = multiply) {
-                    drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 16.0, 2.0)
+                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 16.0, 2.0)
                     drawer.fill = ColorRGBa.PINK
                     val w = Writer(drawer)
                     w.apply {

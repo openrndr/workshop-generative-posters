@@ -11,6 +11,7 @@ import org.openrndr.extensions.Screenshots
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
 import org.openrndr.shape.Rectangle
+import org.openrndr.workshop.toolkit.typography.Fonts
 
 class Images001 : Program() {
 
@@ -51,7 +52,7 @@ class Images001 : Program() {
         drawFunc = {
             poster(drawer) {
                 drawer.background(ColorRGBa.WHITE)
-                drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 14.0, 2.0)
+                drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 14.0, 2.0)
 
                 // -- images background layer
                 layer {
