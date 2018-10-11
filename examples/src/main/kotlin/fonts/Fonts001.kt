@@ -73,7 +73,6 @@ class Fonts001 : Program() {
             drawer.scale(contentScale)
             variants.forEachIndexed { i, variant ->
                 try {
-                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0)
                     drawer.fontMap = FontImageMap.fromUrl(
                             variant.url,
                             fontSize

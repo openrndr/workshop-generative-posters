@@ -5,6 +5,7 @@ import org.openrndr.draw.FontImageMap
 import org.openrndr.extensions.Screenshots
 import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
+import org.openrndr.workshop.toolkit.typography.Fonts
 
 class Typography001: Program() {
 
@@ -15,7 +16,7 @@ class Typography001: Program() {
 
         drawFunc = {
             poster(drawer) {
-                drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 32.0, 2.0)
+                drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, 2.0)
                 drawer.text("My name is", 20.0, 200.0)
 
                 layer(post = gaussianBlur.apply {
@@ -24,7 +25,7 @@ class Typography001: Program() {
                     window = 25
                     sigma = Math.cos(seconds)*5.0 + 5.0
                 }, blend = add) {
-                    drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 64.0, 2.0)
+                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, 2.0)
                     drawer.text("Tim Blurton", 20.0, 250.0)
                 }
             }

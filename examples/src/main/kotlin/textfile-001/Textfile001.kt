@@ -7,6 +7,7 @@ import org.openrndr.extensions.Screenshots
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
 import org.openrndr.workshop.toolkit.filters.VerticalWaves
+import org.openrndr.workshop.toolkit.typography.Fonts
 
 class Textfile001 : Program() {
 
@@ -30,7 +31,7 @@ class Textfile001 : Program() {
             poster(drawer) {
 
                 layer(post = verticalWaves) {
-                        drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 32.0, scale)
+                        drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, scale)
                         drawer.texts((0 until text.size).map { text[it] }, (0 until text.size).map { Vector2(20.0, (it+1)*20.0) })
                 }
             }

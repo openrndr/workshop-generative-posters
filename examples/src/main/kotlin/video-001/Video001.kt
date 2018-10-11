@@ -7,6 +7,7 @@ import org.openrndr.extensions.Screenshots
 import org.openrndr.ffmpeg.FFMPEGVideoPlayer
 import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
+import org.openrndr.workshop.toolkit.typography.Fonts
 import poster
 
 class Video001: Program() {
@@ -37,7 +38,7 @@ class Video001: Program() {
                 // -- video background layer
                 layer {
                     if (videoPlayer == null) {
-                        drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 32.0, 2.0)
+                        drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, 2.0)
                         drawer.text("Drop a video on me", 20.0, 200.0)
                     } else {
                         videoPlayer?.let {
@@ -52,7 +53,7 @@ class Video001: Program() {
 
                 // -- typography layer
                 layer(post = gaussianBlur.apply { sigma = Math.random() * 4.0 }, blend = add) {
-                    drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 64.0, 2.0)
+                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, 2.0)
                     drawer.text("VIDEO", Math.random() * drawer.width, Math.random() * drawer.height)
                 }
             }

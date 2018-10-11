@@ -13,6 +13,7 @@ import org.openrndr.extensions.Screenshots
 import org.openrndr.filter.blend.multiply
 import org.openrndr.shape.Rectangle
 import org.openrndr.text.Writer
+import org.openrndr.workshop.toolkit.typography.Fonts
 
 class Website001 : Program() {
 
@@ -58,7 +59,7 @@ class Website001 : Program() {
                 // - create the typography layer
                 layer {
                     drawer.fill = baseColor
-                    drawer.fontMap = FontImageMap.fromUrl("file:data/fonts/IBMPlexMono-Bold.ttf", 64.0, scale)
+                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, scale)
 
                     val w = Writer(drawer)
                     w.box = Rectangle(10.0, 10.0, width - 20.0, height - 20.0)
