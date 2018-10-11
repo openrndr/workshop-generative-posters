@@ -1,4 +1,3 @@
-package `video-001`
 
 import org.openrndr.Program
 import org.openrndr.application
