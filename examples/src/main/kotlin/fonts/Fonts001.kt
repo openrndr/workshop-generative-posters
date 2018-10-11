@@ -1,5 +1,3 @@
-package fonts
-
 import org.openrndr.PresentationMode
 import org.openrndr.Program
 import org.openrndr.application
