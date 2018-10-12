@@ -40,7 +40,7 @@ If you'd like to use the toolkit in your own project, you can do the following:
 - Replace `TemplateProgram.kt` with something from the `examples` module in this repository and run it.
 
 
-# DOCS
+# Docs
 
 ## OpenRNDR 101
 
