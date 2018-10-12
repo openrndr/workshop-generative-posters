@@ -86,7 +86,7 @@ val text = try {
 
 val screenshotsMd = File("./images").listFiles().filter {
     listOf("png", "jpg").contains(it.extension)
-}.map {
+}.sortedBy { it.name }.map {
     val exampleName = it.name.split(".")[0]
     """
         #### ${exampleName}
