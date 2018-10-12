@@ -76,6 +76,9 @@ Your create a class which inherits from `Program` and override its two most impo
 Setup is called once at the start of the program, then draw is called as many times a second as possible.
 `setup` is for initializing the state of your program, while `draw` is for updating that state: creating animations.
 
+
+**Important note for MacOS users: you need to pass `-XstartOnFirstThread` as a VM option to properly run an OpenRNDR program.**
+
 ### Recipes
 
 #### Define your draw function directly inside setup
