@@ -76,8 +76,9 @@ Your create a class which inherits from `Program` and override its two most impo
 Setup is called once at the start of the program, then draw is called as many times a second as possible.
 `setup` is for initializing the state of your program, while `draw` is for updating that state: creating animations.
 
+### Recipes
 
-#### Pro Tip ( ͡° ͜ʖ ͡°)
+#### Define your draw function directly inside setup
 User the `FunctionDrawer` extension to define the draw function directly inside `setup`.
 ```
 class SimpleProgram: Program() {
@@ -97,7 +98,43 @@ class SimpleProgram: Program() {
 
 
 
+#### Generate screenshots from your sketch
+- use the `ScreenShots` extension
+- use its `scale` property to determine how large your output image should be
+- press space and a screenshot will be saved at the root of your project directory.
+```
+// inside your setup function
+extend(Screenshots().apply {
+    scale = 4.0
+})
+```
+
+
+#### Record your sketch to a video
+- use the ScreenRecorder extension
+- this will record your sketch in a video file placed at the root of your project directory.
+```
+// inside your setup function
+extend(ScreenRecorder())
+```
+
+
+
 ## Toolkit
+
+### Most Important classes
+- [PosterBuilder](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/poster/PosterBuilder.kt)
+- [Blending](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/filters/Blending.kt)
+- [Filters](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/filters/Waves.kt)
+
+### Layer
+```
+poster(drawer){
+    layer(blending = someblending, post = somefilter){
+      ... drawing commands
+    }
+}
+```
 
 ### Fonts
 There are a number of hand picked fonts included in the toolkit.
