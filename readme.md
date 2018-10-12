@@ -147,7 +147,7 @@ drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0)
 ```
 
 There is also a small sketch allowing you to preview available fonts using your own text at
-`examples/main/kotlin/fonts/Fonts001.kt`. Use the left and right arrow keys to step through the different fonts, and use the scrollwheel of your mouse to increase or decrease the size at which the text is rendered at.
+[`examples/main/kotlin/fonts/Fonts001.kt`](https://github.com/openrndr/workshop-generative-posters/blob/master/examples/src/main/kotlin/fonts/Fonts001.kt). Use the left and right arrow keys to step through the different fonts, and use the scrollwheel of your mouse to increase or decrease the size at which the text is rendered at.
 There is a function declared at the top of the sketch which determines the text being used for previewing the fonts.
 Change this to
 ```
