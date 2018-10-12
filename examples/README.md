@@ -5,7 +5,7 @@
 
 #### effects-001
 
-![effects-001](./images/effects-001.png)
+[![effects-001](./images/effects-001.png)](./src/main/kotlin/effects-001/)
 
 #### effects-002
 
