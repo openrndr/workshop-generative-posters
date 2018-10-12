@@ -1,6 +1,6 @@
 ### Dynamic poster references
 
-| refference | description  |
+| reference | description  |
 |:-------------| :-----|
 | [dia_studio](https://www.instagram.com/dia_studio/?hl=en) | Kinetic Identity & Typographic Research |
 | [nikitaiziev](https://www.instagram.com/nikitaiziev/) | Static & kinetic design |

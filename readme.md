@@ -128,7 +128,8 @@ extend(ScreenRecorder())
 - [Blending](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/filters/Blending.kt)
 - [Filters](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/filters/Waves.kt)
 
-### Layer
+### [Layer](https://github.com/openrndr/workshop-generative-posters/blob/master/toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/poster/PosterBuilder.kt#L13)
+A layer allows you to group drawing commands together and to apply filters and blending to them. They are conceptually similar to layers in Photoshop.
 ```
 poster(drawer){
     layer(blending = someblending, post = somefilter){
@@ -157,3 +158,10 @@ Change this to
 to use your own text for the specimens.
 This can come in handy if you'd like to quickly test whether a specific font supports your alphabet.
 
+## Assignment
+
+Make a series of generative posters for the JFuture conference.<br>
+The posters can be informative, giving you details about the events and speakers, or they can be completely abstract visual experiments, or anything in-between. It's up to you.
+The only requirement is that the word JFuture should be on the poster somehow.
+You can use the provided [examples](https://github.com/openrndr/workshop-generative-posters/tree/master/examples) as a starting point.<br>
+Also, [here is some inspiration](https://github.com/openrndr/workshop-generative-posters/blob/master/inspiration.md).<br>
