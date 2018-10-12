@@ -25,55 +25,55 @@ val captions = mapOf(
 
 val links = mapOf(
         "images-001" to """
-            ../src/main/kotlin/images-001
+            ./src/main/kotlin/images-001
         """.trimIndent(),
 
         "video-001" to """
-            ../src/main/kotlin/video-001
+            ./src/main/kotlin/video-001
         """.trimIndent(),
 
         "shapes-001" to """
-            ../src/main/kotlin/shapes-001
+            ./src/main/kotlin/shapes-001
         """.trimIndent(),
 
         "shapes-003" to """
-            ../src/main/kotlin/shapes-003
+            ./src/main/kotlin/shapes-003
         """.trimIndent(),
 
         "shapes-002" to """
-             ../src/main/kotlin/shapes-002
+             ./src/main/kotlin/shapes-002
         """.trimIndent(),
 
         "textfile-001" to """
-            ../src/main/kotlin/textfile-001
+            ./src/main/kotlin/textfile-001
         """.trimIndent(),
 
         "website-001" to """
-             ../src/main/kotlin/website-001
+             ./src/main/kotlin/website-001
         """.trimIndent(),
 
         "typography-002" to """
-            ../src/main/kotlin/typography-002
+            ./src/main/kotlin/typography-002
         """.trimIndent(),
 
         "typography-001" to """
-             ../src/main/kotlin/typography-001
+             ./src/main/kotlin/typography-001
         """.trimIndent(),
 
         "effects-001" to """
-            ../src/main/kotlin/effects-001
+            ./src/main/kotlin/effects-001
         """.trimIndent(),
 
         "effects-002" to """
-            ../src/main/kotlin/effects-002
+            ./src/main/kotlin/effects-002
         """.trimIndent(),
 
         "rss-001" to """
-            ../src/main/kotlin/rss-001
+            ./src/main/kotlin/rss-001
         """.trimIndent(),
 
         "effects-003" to """
-            ../src/main/kotlin/effects-003
+            ./src/main/kotlin/effects-003
         """.trimIndent()
 )
 
