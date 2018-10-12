@@ -1,12 +1,24 @@
 import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.*
 
+private var cachedTarget : RenderTarget? = null
+
 class PosterBuilder(val drawer: Drawer) {
 
-    val target = RenderTarget.active.let {
-        renderTarget(it.width, it.height) {
-            colorBuffer()
-            depthBuffer()
+    val target = RenderTarget.active.let { activeTarget ->
+        if(cachedTarget == null || cachedTarget?.height != activeTarget.height || cachedTarget?.width != activeTarget.width ){
+            cachedTarget?.let {
+                it.destroy()
+                it.colorBuffer(0).destroy()
+            }
+            val result = renderTarget(activeTarget.width, activeTarget.height){
+                colorBuffer()
+                depthBuffer()
+            }
+            cachedTarget = result
+            result
+        } else {
+            cachedTarget
         }
     }
 
@@ -65,9 +77,11 @@ class PosterBuilder(val drawer: Drawer) {
 fun poster(drawer: Drawer, builder: PosterBuilder.() -> Unit) {
 
     val pb = PosterBuilder(drawer)
-    drawer.withTarget(pb.target) {
-        drawer.background(ColorRGBa.BLACK)
-        pb.builder()
+    pb.target?.let {
+        drawer.withTarget(pb.target) {
+            drawer.background(ColorRGBa.BLACK)
+            pb.builder()
+        }
+        drawer.image(pb.target.colorBuffer(0), pb.target.colorBuffer(0).bounds, drawer.bounds)
     }
-    drawer.image(pb.target.colorBuffer(0), pb.target.colorBuffer(0).bounds, drawer.bounds)
 }
