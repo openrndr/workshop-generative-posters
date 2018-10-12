@@ -113,6 +113,7 @@ extend(Screenshots().apply {
 #### Record your sketch to a video
 - use the ScreenRecorder extension
 - this will record your sketch in a video file placed at the root of your project directory.
+- **Note: Make sure `ffmpeg` is installed on your system.**
 ```
 // inside your setup function
 extend(ScreenRecorder())
