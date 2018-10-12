@@ -4,7 +4,6 @@ import org.openrndr.Application
 import java.io.File
 import java.nio.file.Paths
 
-val sentence = "Pack my box with five dozen liquor jugs."
 
 internal fun main(args: Array<String>) {
     val outputPath = Paths.get("toolkit/src/main/kotlin/org/openrndr/workshop/toolkit/typography/Fonts.kt").toAbsolutePath().toString();

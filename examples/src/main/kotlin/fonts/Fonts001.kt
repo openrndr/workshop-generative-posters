@@ -17,7 +17,8 @@ class Fonts001 : Program() {
 
 
     val getText = { font: Font ->
-        font.variant
+//        font.variant
+         "Pack my box with five dozen liquor jugs."
 //        "your text"
     }
 
@@ -31,12 +32,6 @@ class Fonts001 : Program() {
         }.groupBy {
             it.name
         }
-
-        val renderTarget = renderTarget(width, height) {
-            colorBuffer()
-            depthBuffer()
-        }
-
         val fs = groupedFonts.entries.toList()
         var index = 0
         window.presentationMode = PresentationMode.MANUAL
@@ -58,14 +53,12 @@ class Fonts001 : Program() {
         mouse.scrolled.listen { evt ->
             val d = evt.rotation.y
             val newContentScale = contentScale + (if (d < 0) -0.005 else 0.005)
-            println("contentSalce: $newContentScale")
-            contentScale = clamp(newContentScale, 0.1, 1.0)
+            contentScale = clamp(newContentScale, 0.05, 1.0)
             window.requestDraw()
         }
 
         extend(FunctionDrawer {
             println("${index + 1} / ${fs.size}: ${fs[index].key}")
-            println("contentScale: $contentScale")
             val variants = fs[index].value
             drawer.background(ColorRGBa.WHITE)
             drawer.fill = ColorRGBa.BLACK
@@ -82,7 +75,6 @@ class Fonts001 : Program() {
                     println("caught exception: ${e.message}")
                 }
             }
-            drawer.image(renderTarget.colorBuffer(0))
         })
 
     }
