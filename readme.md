@@ -168,3 +168,25 @@ The posters can be informative, giving you details about the events and speakers
 The only requirement is that the word JFuture should be on the poster somehow.
 You can use the provided [examples](https://github.com/openrndr/workshop-generative-posters/tree/master/examples) as a starting point.<br>
 Also, [here is some inspiration](https://github.com/openrndr/workshop-generative-posters/blob/master/inspiration.md).<br>
+
+## Schedule 12-10-2018
+        
+        14:00
+        Introduction
+        
+        14:15
+        Setup OPENRNDR + Assignment
+        
+        14:30 - 17:30
+        Produce + Technical support 
+        
+        17:30
+        Upload results
+        
+        18:00
+        Presentations
+        
+
+ ## Upload results
+ 
+ https://goo.gl/forms/xH2RHzND69xmZLy42
