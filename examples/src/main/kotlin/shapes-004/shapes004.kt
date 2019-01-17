@@ -1,8 +1,7 @@
-
 import org.openrndr.application
 import org.openrndr.color.ColorRGBa
-import org.openrndr.draw.*
 import org.openrndr.extensions.Screenshots
+import org.openrndr.extra.compositor.*
 import org.openrndr.math.Vector2
 import org.openrndr.math.map
 import org.openrndr.workshop.toolkit.filters.darken
@@ -20,13 +19,15 @@ fun main(args: Array<String>) {
                 scale = 4.0
             })
 
-            fun drawCircles(drawer: Drawer, l: Int) {
+
+
+            fun drawCircles(l: Int) {
 
                 var count = 1
-                if(mouse.position.y> 0) {
+                if (mouse.position.y > 0) {
                     count = map(0.0, height * 1.0, 0.0, 10.0, mouse.position.y).toInt() + 1
                 }
-                val xStep = (width  / count)
+                val xStep = (width / count)
                 val yStep = (height / count)
 
                 drawer.translate(Vector2(width / 2.0, height / 2.0))
@@ -40,35 +41,42 @@ fun main(args: Array<String>) {
                         listOfVector2.add(Vector2(x * xStep - xCorrect + xStep / 2, y * yStep - yCorrect + yStep / 2))
                     }
                 }
-                drawer.circles(listOfVector2, Math.abs(Math.sin(seconds*0.1+l*0.1)*(25.0*l)) )
-
+                drawer.circles(listOfVector2, Math.abs(Math.sin(seconds * 0.1 + l * 0.1) * (25.0 * l)))
             }
-            
-            extend {
 
-                poster(drawer) {
-
-                    drawer.background(ColorRGBa.WHITE)
-
-                    for(l in 0..5) {
-                        if(l%2 == 0) {
-                            layer(blend = lighten) {
-                                drawer.fill = null
-                                drawer.stroke = ColorRGBa.PINK
-                                drawer.strokeWeight = l*0.5+0.5
-                                drawCircles(drawer, l)
-                            }
-                        } else {
-                            layer(blend = darken) {
-                                drawer.fill = null
-                                drawer.stroke = ColorRGBa.WHITE
-                                drawer.strokeWeight = l*0.5+0.5
-                                drawCircles(drawer, l)
-                            }
-                        }
+            val poster = compose {
+                layer {
+                    draw {
+                        drawer.background(ColorRGBa.WHITE)
                     }
                 }
 
+                // TODO blending is broken
+                for (l in 0..5) {
+                    if (l % 2 == 0) {
+                        layer {
+//                            blend(lighten)
+                            draw {
+                                drawer.fill = null
+                                drawer.stroke = ColorRGBa.PINK
+                                drawer.strokeWeight = l * 0.5 + 0.5
+                                drawCircles(l)
+                            }
+                        }
+                    } else {
+                        layer {
+//                            blend(darken)
+                            drawer.fill = null
+                            drawer.stroke = ColorRGBa.WHITE
+                            drawer.strokeWeight = l * 0.5 + 0.5
+                            drawCircles(l)
+                        }
+                    }
+                }
+            }
+
+            extend {
+                poster.draw(drawer)
             }
         }
     }

@@ -63,11 +63,11 @@ allprojects {
         compile "org.openrndr.panel:openrndr-panel:$panel_version"
         runtime "org.openrndr:openrndr-gl3:$rndr_version"
         runtime "org.openrndr:$rndr_gl3_natives:$rndr_version"
-        implementation "com.github.openrndr.orx:orx-compositor:v$orx_version"
+        implementation 'com.github.openrndr.orx:orx-compositor:a05e1e8b6d'
     }
 }
 
-project(":toolkit"){
+project(":toolkit") {
     apply plugin: 'maven-publish'
     publishing {
         publications {

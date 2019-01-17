@@ -138,8 +138,7 @@ object RSSParser {
                 date = sdf.parse(pubDateString)
             }
         } catch (e1: ParseException) {
-            // TODO Auto-generated catch block
-            //e1.printStackTrace();
+            e1.printStackTrace();
         } catch (e1: NullPointerException) {
             //
         }

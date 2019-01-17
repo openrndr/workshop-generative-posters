@@ -6,10 +6,12 @@ import org.openrndr.draw.FontImageMap
 import org.openrndr.draw.MagnifyingFilter
 import org.openrndr.draw.MinifyingFilter
 import org.openrndr.extensions.Screenshots
-import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.math.Vector2
 import org.openrndr.shape.Rectangle
 import org.openrndr.workshop.toolkit.typography.Fonts
+import org.openrndr.extra.compositor.compose
+import org.openrndr.extra.compositor.draw
+import org.openrndr.extra.compositor.layer
 
 
 private fun Rectangle.translated(vector2: Vector2): Rectangle {
@@ -20,18 +22,15 @@ private fun Rectangle.translated(vector2: Vector2): Rectangle {
 fun main(args: Array<String>) {
     application {
         configure {
-
-
             width = 480
             height = 680
-
         }
+
         program {
 
 
             window.presentationMode = PresentationMode.MANUAL
 
-            val gaussianBlur = GaussianBlur()
             val images = mutableListOf<ColorBuffer>()
 
             // -- setup drop event
@@ -61,19 +60,18 @@ fun main(args: Array<String>) {
             }
 
 
-
             // -- extend with screenshots, spacebar to shoot
             extend(Screenshots().apply {
                 scale = 4.0
             })
-            extend {
 
-                poster(drawer) {
-                    drawer.background(ColorRGBa.WHITE)
-                    drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 14.0, 2.0)
 
-                    // -- images background layer
-                    layer {
+            val poster = compose {
+                layer {
+                    draw {
+                        drawer.background(ColorRGBa.WHITE)
+                        drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 14.0, 2.0)
+
                         if (images.size == 0) {
                             drawer.fill = ColorRGBa.BLUE
                             drawer.text("drop images here", 20.0, 20.0)
@@ -88,7 +86,7 @@ fun main(args: Array<String>) {
                                 val stacking = 40
                                 val margin = spacing * stacking
 
-                                val targetBounds = Rectangle(Math.random() * (width - iw + margin/2.0)-margin, Math.random() * (height - ih + margin/2.0) - margin, imageBounds.width * 0.1, imageBounds.height * 0.1)
+                                val targetBounds = Rectangle(Math.random() * (width - iw + margin / 2.0) - margin, Math.random() * (height - ih + margin / 2.0) - margin, imageBounds.width * 0.1, imageBounds.height * 0.1)
 
                                 for (i in 0 until stacking) {
                                     drawer.image(image, imageBounds, targetBounds.translated(Vector2(spacing * i.toDouble(), spacing * i.toDouble())))
@@ -97,7 +95,10 @@ fun main(args: Array<String>) {
                         }
                     }
                 }
+            }
 
+            extend {
+                poster.draw(drawer)
             }
         }
     }

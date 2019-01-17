@@ -8,6 +8,8 @@ import org.openrndr.draw.FontImageMap
 import org.openrndr.draw.RenderTarget
 import org.openrndr.draw.grayscale
 import org.openrndr.extensions.Screenshots
+import org.openrndr.extra.compositor.*
+import org.openrndr.filter.blend.add
 import org.openrndr.filter.blend.multiply
 import org.openrndr.shape.Rectangle
 import org.openrndr.text.Writer
@@ -26,9 +28,9 @@ fun main(args: Array<String>) {
             val rawHTML = URLFetcher.fetch(URL(url), 1000, 1000)
 
             val article = ArticleExtractor.with(url, rawHTML)
-                    .extractMetadata()
-                    .extractContent()
-                    .article()
+                .extractMetadata()
+                .extractContent()
+                .article()
 
             val imageElements = Jsoup.parse(rawHTML).getElementsByTag("img")
             val images = mutableListOf<ColorBuffer>()
@@ -46,17 +48,23 @@ fun main(args: Array<String>) {
                 scale = 4.0
             })
 
-            extend {
 
-                val scale = (RenderTarget.active.width.toDouble() / width)
-                // -- create a random base color
-                val baseColor = ColorRGBa(Math.random(), Math.random(), Math.random())
+            val scale = (RenderTarget.active.width.toDouble() / width)
 
-                poster(drawer) {
-                    drawer.background(baseColor)
+            var baseColor = ColorRGBa(Math.random(), Math.random(), Math.random())
+
+            val poster = compose {
+                layer {
+                    draw {
+                        drawer.background(baseColor)
+                    }
+                }
+
+                images.forEach {
                     // -- create a layer for every image, these will be multiply blended
-                    images.forEach {
-                        layer(blend = multiply) {
+                    layer {
+                        blend(multiply)
+                        draw {
                             drawer.background(ColorRGBa.WHITE)
                             drawer.drawStyle.colorMatrix = grayscale(0.3, 0.3, 0.3)
                             val imageSize = it.bounds
@@ -64,9 +72,11 @@ fun main(args: Array<String>) {
                             drawer.image(it, imageSize, target)
                         }
                     }
+                }
 
-                    // - create the typography layer
-                    layer {
+                // - create the typography layer
+                layer {
+                    draw {
                         drawer.fill = baseColor
                         drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, scale)
 
@@ -79,8 +89,13 @@ fun main(args: Array<String>) {
                         w.text(article.title)
                     }
                 }
-                Thread.sleep(500)
 
+            }
+
+            extend {
+                baseColor = ColorRGBa(Math.random(), Math.random(), Math.random())
+                poster.draw(drawer)
+                Thread.sleep(500)
             }
         }
     }

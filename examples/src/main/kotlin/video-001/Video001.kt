@@ -1,10 +1,13 @@
+import jdk.nashorn.internal.objects.NativeJava.extend
 import org.openrndr.application
 import org.openrndr.draw.FontImageMap
 import org.openrndr.extensions.Screenshots
+import org.openrndr.extra.compositor.*
 import org.openrndr.ffmpeg.FFMPEGVideoPlayer
 import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.workshop.toolkit.typography.Fonts
+import java.awt.SystemColor.window
 
 
 // -- entry point of the application
@@ -39,12 +42,11 @@ fun main(args: Array<String>) {
             extend(Screenshots().apply {
                 scale = 2.0
             })
-            extend {
 
-                poster(drawer) {
+            val poster = compose {
 
-                    // -- video background layer
-                    layer {
+                layer {
+                    draw {
                         if (videoPlayer == null) {
                             drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 32.0, 2.0)
                             drawer.text("Drop a video on me", 20.0, 200.0)
@@ -58,14 +60,22 @@ fun main(args: Array<String>) {
                             }
                         }
                     }
+                }
 
-                    // -- typography layer
-                    layer(post = gaussianBlur.apply { sigma = Math.random() * 4.0 }, blend = add) {
+                layer {
+                    blend(add)
+                    post(GaussianBlur()) {
+                        sigma = Math.random() * 4.0
+                    }
+                    draw {
                         drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 64.0, 2.0)
                         drawer.text("VIDEO", Math.random() * drawer.width, Math.random() * drawer.height)
                     }
                 }
+            }
 
+            extend {
+                poster.draw(drawer)
             }
         }
     }
