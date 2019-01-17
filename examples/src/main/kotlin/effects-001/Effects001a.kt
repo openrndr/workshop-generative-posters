@@ -25,7 +25,7 @@ class Effects001a : Program() {
                 layer(post = stepWaves) {
                     drawer.fill = ColorRGBa.WHITE
                     drawer.stroke = null
-                    drawer.circle(Vector2(width/2.0, height/2.0), 200.0)
+                    drawer.circle(Vector2(width / 2.0, height / 2.0), 200.0)
                 }
             }
         }

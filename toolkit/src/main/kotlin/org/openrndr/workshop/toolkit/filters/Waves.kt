@@ -2,7 +2,7 @@ package org.openrndr.workshop.toolkit.filters
 
 import org.openrndr.color.ColorRGBa
 import org.openrndr.draw.Filter
-import org.openrndr.filter.filterShaderFromUrl
+import org.openrndr.draw.filterShaderFromUrl
 import org.openrndr.math.Vector2
 import org.openrndr.resourceUrl
 
