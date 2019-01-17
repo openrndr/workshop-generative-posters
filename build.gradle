@@ -14,6 +14,7 @@ buildscript {
     }
 }
 
+ext.orx_version = "0.0.19"
 ext.rndr_version = '0.3.32-rc2'
 ext.panel_version = '0.3.3'
 ext.slf4j_version = '1.7.25'
@@ -62,6 +63,7 @@ allprojects {
         compile "org.openrndr.panel:openrndr-panel:$panel_version"
         runtime "org.openrndr:openrndr-gl3:$rndr_version"
         runtime "org.openrndr:$rndr_gl3_natives:$rndr_version"
+        implementation "com.github.openrndr.orx:orx-compositor:v$orx_version"
     }
 }
 
