@@ -1,6 +1,5 @@
 import org.openrndr.application
 import org.openrndr.color.ColorRGBa
-import org.openrndr.draw.RenderTarget
 import org.openrndr.extensions.Screenshots
 import org.openrndr.extra.compositor.compose
 import org.openrndr.extra.compositor.draw
@@ -8,7 +7,6 @@ import org.openrndr.extra.compositor.layer
 import org.openrndr.extra.compositor.post
 import org.openrndr.math.Vector2
 import org.openrndr.workshop.toolkit.filters.StepWaves
-
 
 fun main(args: Array<String>) {
     application {

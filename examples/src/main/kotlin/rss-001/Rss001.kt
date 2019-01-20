@@ -9,7 +9,6 @@ import org.openrndr.rss.RSSParser
 import org.openrndr.shape.Rectangle
 import org.openrndr.text.Writer
 import org.openrndr.workshop.toolkit.typography.Fonts
-import sun.audio.AudioPlayer.player
 import java.net.URL
 
 
@@ -31,18 +30,10 @@ fun main(args: Array<String>) {
 
 
             val poster = compose {
-                layer {
-                    blend(multiply)
-                    draw {
-                        drawer.background(ColorRGBa.WHITE.shade(0.1))
-                        drawer.fill = ColorRGBa.PINK
-                        drawer.stroke = null
-                        drawer.circle(Vector2(width / 2.0, height / 2.0) + Vector2(0.0, Math.sin(seconds) * 50.0), 300.0)
-                    }
-                }
 
                 layer {
                     draw {
+                        drawer.background(ColorRGBa.BLACK)
                         val article = articles[seconds.toInt() % articles.size]
                         drawer.fontMap = FontImageMap.fromUrl(Fonts.IBMPlexMono_Bold, 16.0, 2.0)
                         drawer.fill = ColorRGBa.PINK
@@ -53,6 +44,16 @@ fun main(args: Array<String>) {
                         }
                     }
                 }
+                layer {
+                    blend(multiply)
+                    draw {
+                        drawer.background(ColorRGBa.BLACK)
+                        drawer.fill = ColorRGBa.PINK
+                        drawer.stroke = null
+                        drawer.circle(Vector2(width / 2.0, height / 2.0) + Vector2(0.0, Math.sin(seconds) * 50.0), 300.0)
+                    }
+                }
+
             }
 
 

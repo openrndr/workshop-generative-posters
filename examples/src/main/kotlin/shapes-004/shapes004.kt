@@ -19,11 +19,9 @@ fun main(args: Array<String>) {
                 scale = 4.0
             })
 
-
-
             fun drawCircles(l: Int) {
 
-                var count = 1
+                var count = l + 1
                 if (mouse.position.y > 0) {
                     count = map(0.0, height * 1.0, 0.0, 10.0, mouse.position.y).toInt() + 1
                 }
@@ -55,8 +53,9 @@ fun main(args: Array<String>) {
                 for (l in 0..5) {
                     if (l % 2 == 0) {
                         layer {
-//                            blend(lighten)
+                            blend(lighten)
                             draw {
+                                drawer.background(ColorRGBa.BLACK)
                                 drawer.fill = null
                                 drawer.stroke = ColorRGBa.PINK
                                 drawer.strokeWeight = l * 0.5 + 0.5
@@ -65,11 +64,14 @@ fun main(args: Array<String>) {
                         }
                     } else {
                         layer {
-//                            blend(darken)
-                            drawer.fill = null
-                            drawer.stroke = ColorRGBa.WHITE
-                            drawer.strokeWeight = l * 0.5 + 0.5
-                            drawCircles(l)
+                            blend(darken)
+                            draw {
+                                drawer.background(ColorRGBa.WHITE)
+                                drawer.fill = null
+                                drawer.stroke = ColorRGBa.WHITE
+                                drawer.strokeWeight = l * 0.5 + 0.5
+                                drawCircles(l)
+                            }
                         }
                     }
                 }

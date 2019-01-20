@@ -6,9 +6,7 @@ import org.openrndr.draw.filterShaderFromUrl
 import org.openrndr.math.Vector2
 import org.openrndr.resourceUrl
 
-
 class GradientMap : Filter(filterShaderFromUrl(resourceUrl("/shaders/gradient-map.frag"))) {
-
     var dark: ColorRGBa by parameters
     var light: ColorRGBa by parameters
     init {

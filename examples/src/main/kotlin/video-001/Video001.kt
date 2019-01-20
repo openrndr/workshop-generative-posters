@@ -1,4 +1,3 @@
-import jdk.nashorn.internal.objects.NativeJava.extend
 import org.openrndr.application
 import org.openrndr.draw.FontImageMap
 import org.openrndr.extensions.Screenshots
@@ -7,7 +6,6 @@ import org.openrndr.ffmpeg.FFMPEGVideoPlayer
 import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.workshop.toolkit.typography.Fonts
-import java.awt.SystemColor.window
 
 
 // -- entry point of the application
