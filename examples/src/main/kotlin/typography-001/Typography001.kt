@@ -1,14 +1,12 @@
 import org.openrndr.application
 import org.openrndr.draw.FontImageMap
 import org.openrndr.extensions.Screenshots
-import org.openrndr.filter.blend.add
 import org.openrndr.filter.blur.GaussianBlur
 import org.openrndr.workshop.toolkit.typography.Fonts
 import org.openrndr.extra.compositor.compose
 import org.openrndr.extra.compositor.draw
 import org.openrndr.extra.compositor.layer
 import org.openrndr.extra.compositor.post
-
 
 // -- entry point of the application
 fun main(args: Array<String>) {
@@ -17,7 +15,6 @@ fun main(args: Array<String>) {
             width = 640
             height = 480
         }
-
 
         program {
             extend(Screenshots())

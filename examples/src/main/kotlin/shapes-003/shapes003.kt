@@ -8,7 +8,6 @@ import org.openrndr.extra.compositor.compose
 import org.openrndr.extra.compositor.draw
 import org.openrndr.extra.compositor.layer
 
-
 fun main(args: Array<String>) {
 
     fun srand() = (Math.random() - 0.5) * 2.0

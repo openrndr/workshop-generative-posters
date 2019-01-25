@@ -5,8 +5,6 @@ import javax.net.ssl.X509TrustManager;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-
 import java.security.cert.X509Certificate;
 import java.util.zip.GZIPInputStream;
 
@@ -23,7 +21,7 @@ public class URLFetcher {
         try {
             // Create a trust manager that does not validate certificate chains
             TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
-                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                public X509Certificate[] getAcceptedIssuers() {
                     return null;
                 }
 

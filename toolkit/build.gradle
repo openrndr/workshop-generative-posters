@@ -1,1 +1,3 @@
-
+dependencies {
+    compile "com.github.chimbori:crux:2.0.0"
+}
