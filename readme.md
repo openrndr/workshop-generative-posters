@@ -4,7 +4,7 @@ This is the code that accompanies the workshop
 
 ## Setup
 
- - Follow the [requirements](https://guide.openrndr.org/#/Tutorial_Start?id=requirements) and [prerequisites](https://guide.openrndr.org/#/Tutorial_Start?id=setting-up-prerequisites()) sections in the [OpenRNDR guide](https://guide.openrndr.org/).
+ - Follow the [requirements](https://guide.openrndr.org/#/02_Getting_Started_with_OPENRNDR/C00_SetupYourFirstProgram?id=requirements) and [prerequisites](https://guide.openrndr.org/#/02_Getting_Started_with_OPENRNDR/C00_SetupYourFirstProgram?id=setting-up-prerequisites) sections in the [OpenRNDR guide](https://guide.openrndr.org/).
  - Clone this repository and open it in IntelliJ.<br>
    *Hint*: You can do this from within IntelliJ if you're unfamiliar with [git](https://git-scm.com/).<br>
    Do the following:
