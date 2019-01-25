@@ -16,6 +16,17 @@ class GradientMap : Filter(filterShaderFromUrl(resourceUrl("/shaders/gradient-ma
 }
 
 
+class Threshold : Filter(filterShaderFromUrl(resourceUrl("/shaders/threshold.frag"))) {
+    var dark: ColorRGBa by parameters
+    var light: ColorRGBa by parameters
+    var threshold: Double by parameters
+    init {
+        dark = ColorRGBa.BLACK
+        light = ColorRGBa.WHITE
+        threshold = 0.5
+    }
+}
+
 class EdgeDetect : Filter(filterShaderFromUrl(resourceUrl("/shaders/edge-detect.frag"))) {
     var gain: Double by parameters
     init {

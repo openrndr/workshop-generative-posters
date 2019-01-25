@@ -60,9 +60,10 @@ allprojects {
         compile "org.openrndr:openrndr-ffmpeg:$rndr_version"
         compile "org.openrndr:openrndr-extensions:$rndr_version"
         compile "org.openrndr:openrndr-filter:$rndr_version"
-        compile "org.openrndr.panel:openrndr-panel:$panel_version"
+        //compile "org.openrndr.panel:openrndr-panel:$panel_version"
         runtime "org.openrndr:openrndr-gl3:$rndr_version"
         runtime "org.openrndr:$rndr_gl3_natives:$rndr_version"
+        implementation 'com.github.edwinRNDR:numate:2afc3cf338'
         implementation 'com.github.openrndr.orx:orx-compositor:a3385abee0'
     }
 }
